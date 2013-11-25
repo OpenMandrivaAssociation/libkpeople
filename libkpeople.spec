@@ -1,31 +1,25 @@
-%define rel 3
-%define major 0
-%define sdo_version 0.10.0
-%define kde_version 4.10.1
-
+%define major 1
 Name: libkpeople
-Version: 0.0.80
-Release: %mkrel  %{rel}
+Version: 0.1.0
+Release: 1
 Summary: Metacontact aggregation library
 Group:   System/Libraries
 License: LGPLv2
 URL:     https://projects.kde.org/projects/playground/network/libkpeople
 Source0: http://download.kde.org/unstable/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
 
-BuildRequires: kdelibs4-devel >= 1:%{kde_version}
-BuildRequires: pkgconfig(shared-desktop-ontologies) >= %{sdo_version}
+BuildRequires: kdelibs4-devel
+BuildRequires: pkgconfig(shared-desktop-ontologies)
 BuildRequires: nepomuk-core-devel
 
 
 %description
 A library that provides access to all contacts and the people who hold them.
 
-
 #------------------------------------------------------------------------------
 %package core
 Summary: Commons files used by %{name}
 Group:   Graphical desktop/KDE 
-
 
 %description core
 Commons files used by %{name}
@@ -57,8 +51,8 @@ Group: System/Libraries
 Runtime library for %{name}
 
 %files -n %{libkpeople}
-%{_kde_libdir}/libkpeople.so.%{major}*
-%{_kde_libdir}/libkpeople.so.1
+%{_kde_libdir}/libkpeople.so.0*
+%{_kde_libdir}/libkpeople.so.%{major}
 
 #------------------------------------------------------------------------------
 
@@ -72,9 +66,8 @@ Group: System/Libraries
 Runtime library for %{name}
 
 %files -n %{libkpeoplewidgets}
-%{_kde_libdir}/libkpeoplewidgets.so.%{major}*
-%{_kde_libdir}/libkpeoplewidgets.so.1
-
+%{_kde_libdir}/libkpeoplewidgets.so.0*
+%{_kde_libdir}/libkpeoplewidgets.so.%{major}
 
 #------------------------------------------------------------------------------
 
@@ -112,18 +105,3 @@ export LD=/usr/bin/ld.gold
 %install
 %makeinstall_std -C build
 %find_lang %{name}
-
-
-%changelog
-* Mon Oct 21 2013 umeabot <umeabot> 0.0.80-3.mga4
-+ Revision: 540554
-- Mageia 4 Mass Rebuild
-
-* Wed Oct 09 2013 mikala <mikala> 0.0.80-2.mga4
-+ Revision: 493864
-- Fix typo in provides in the devel package
-
-* Tue Oct 08 2013 mikala <mikala> 0.0.80-1.mga4
-+ Revision: 492831
-- imported package libkpeople
-

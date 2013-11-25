@@ -1,2 +1,4 @@
+removed_sources:
+  libkpeople-0.0.80.tar.bz2: f393d1860df5e9a40da101bbfb912eeedaff28ad
 sources:
-  "libkpeople-0.0.80.tar.bz2": f393d1860df5e9a40da101bbfb912eeedaff28ad
+  libkpeople-0.1.0.tar.bz2: 6ab54b3ba203ff06d17f101060ed277696dfbaad
