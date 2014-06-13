@@ -1,7 +1,7 @@
 %define major 1
 Name: libkpeople
 Version: 0.1.0
-Release: 5
+Release: 6
 Summary: Metacontact aggregation library
 Group:   System/Libraries
 License: LGPLv2
