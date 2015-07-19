@@ -3,7 +3,7 @@
 Summary:	Metacontact aggregation library for KDE
 Name:		libkpeople
 Version:	0.2.2
-Release:	2
+Release:	3
 Group:		Graphical desktop/KDE
 License:	LGPLv2.1+
 Url:		https://projects.kde.org/projects/playground/network/libkpeople
