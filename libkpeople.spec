@@ -87,7 +87,7 @@ Headers files for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %cmake_kde4 -DCMAKE_MINIMUM_REQUIRED_VERSION=3.1
