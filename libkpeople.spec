@@ -8,6 +8,7 @@ Group:		Graphical desktop/KDE
 License:	LGPLv2.1+
 Url:		https://projects.kde.org/projects/playground/network/libkpeople
 Source0:	ftp://ftp.kde.org/pub/kde/unstable/%{name}/%{version}/src/%{name}-%{version}.tar.bz2
+BuildRequires:	make
 BuildRequires:	kdelibs4-devel
 BuildRequires:	kdepimlibs4-devel
 
